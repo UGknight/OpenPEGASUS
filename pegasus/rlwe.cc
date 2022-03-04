@@ -19,7 +19,7 @@ FastMulMod::FastMulMod(uint64_t cnst, uint64_t p) : cnst(cnst), p(p) {
 uint64_t FastMulMod::lazy(uint64_t x) const {
   unsigned long long hw64;
   seal::util::multiply_uint64_hw64(x, cnst_shoup, &hw64);
-  std::uint64_t q = static_cast<std::uint64_t>(hw64) * p;
+  std::uint64_t q = static_cast<std::uint64_t>(hw64) * p;//Äã×ªÊ²Ã´ÄØ
   return (x * cnst - q);
 }
 
